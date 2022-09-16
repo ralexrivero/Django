@@ -1,6 +1,7 @@
 # Django
 
 ## Environment
+
 [![Ubuntu](https://img.shields.io/static/v1?label=&message=Ubuntu&color=E95420&logo=Ubuntu&logoColor=E95420&labelColor=2F333A)](https://ubuntu.com/)<!-- ubuntu -->
 [![Bash](https://img.shields.io/static/v1?label=&message=GNU%20Bash&color=4EAA25&logo=GNU%20Bash&logoColor=4EAA25&labelColor=2F333A)](https://www.gnu.org/software/bash/)<!-- bash -->
 [![Vim](https://img.shields.io/static/v1?label=&message=Vim&color=019733&logo=Vim&logoColor=019733&labelColor=2F333A)](https://www.vim.org/)<!-- vim -->
@@ -14,6 +15,21 @@
 - `pip`
 - `pycodestyle`
 
+## Introduction
+
+Django is a MTV Model Template View derived from MVC - Model View Controller.
+
+### MVC
+
+- Controller: as the name suggests, it controls the flow of the application. It is the part of the application that receives the user input and decides what to do with it. It is also responsible for the interaction with the model and the view. Executes all the business logic and decides what to do with the data. Controller communicates with the model
+- Model: It is the part of the application that deals with the data. It is responsible for the data management and the data storage. It is the part of the application that interacts with the database. It is the part of the application that is responsible for the data management and the data storage. It is the part of the application that interacts with the database. Its conected to the database through the ORM
+- View: It is the part of the application that deals with the user interface. It is responsible for the presentation of the data. It is the part of the application that interacts with the user. It is the part of the application that deals with the user interface. It is responsible for the presentation of the data. It is the part of the application that interacts with the user. The view makes the front end of the application.
+
+### MTV
+
+In this model controller are called views and views are called templates.
+Its a naming convention.
+
 ## Installation
 
 - `python -m pip install Django`
@@ -22,6 +38,11 @@
 
 - `python -m django --version`
 - `django-admin startproject helloworld`
+
+## initial setup
+
+- `python manage.py migrate` generates the database
+- `python manage.py runserver` run development server
 
 ## Author
 <!-- twitter -->
