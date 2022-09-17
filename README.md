@@ -60,6 +60,50 @@ Its a naming convention.
 - `{{ }}` for variables
 - `{% %}` for logic
 
+### template comments
+
+- `{# #}` one line, not rendered in the html
+- `{% comment %} {% endcomment %}` multi line, not renered in the html
+- <!-- comment --> html comment, rendered in the html
+
+### filters
+
+- `{{ variable | filter }}`
+- `{{ variable | filter:argument }}`
+- `{{ variable | filter:"argument" }}`
+- `{{ variable | filter:"argument1":"argument2" }}`
+- `{{ variable | filter:"argument1" argument2 }}`
+- `{{ variable | filter:"argument1" argument2:"argument3" }}`
+
+- `length` returns the length of the list
+- `lower` converts the string to lowercase
+- `upper` converts the string to uppercase
+- `title` converts the string to titlecase
+- `cut` removes all values of arg from the given string
+- `default` provides a default value if the variable is not defined
+- `date` formats a date according to the given format
+- `time` formats a time according to the given format
+- `first` returns the first item of a list
+- `last` returns the last item of a list
+- `join` joins the list with the given string
+- `safe` marks the value as safe which means that django will not escape the string
+- `truncatechars` truncates a string after a given number of chars
+- `truncatewords` truncates a string after a given number of words
+- `slugify` converts a string into a slug
+- `add` adds the arg to the value
+- `get_digit` returns the digit of the number in the given position
+- `random` returns a random item from a list
+- `filesizeformat` formats the value like a human-readable file size (i.e. 13 KB, 4.1 MB, 102 bytes, etc.)
+- `pluralize` adds an s to a word if the value is not 1
+- `yesno` converts boolean values to ‘yes’ or ‘no’
+- `linebreaks` converts all newlines in a piece of plain text to HTML line breaks
+- `linebreaksbr` converts all newlines in a piece of plain text to HTML line breaks (only when followed by a ‘\n’)
+- `removetags` removes all given HTML tags from the value
+- `striptags` removes all HTML tags from the value
+- `urlize` converts URLs in plain text into clickable links
+- `urlizetrunc` converts URLs in plain text into clickable links, truncating longer URLs
+- `wordcount` returns the number of words in the value
+
 ## Author
 <!-- twitter -->
 [![Twitter](https://img.shields.io/twitter/follow/ralex_uy?style=social)](https://twitter.com/ralex_uy) <!-- linkedin --> [![Linkedin](https://img.shields.io/badge/LinkedIn-+27K-blue?style=social&logo=linkedin)](https://www.linkedin.com/in/ronald-rivero/) <!-- github --> [![Github](https://img.shields.io/github/followers/ralexrivero?style=social)](https://github.com/ralexrivero/) <!-- vagrant --> [![Vagrant](https://img.shields.io/static/v1?label=&message=Vagrant%20Profile&color=1868F2&logo=vagrant&labelColor=2F333A)](https://app.vagrantup.com/ralexrivero) <!-- docker --> [![Docker](https://img.shields.io/static/v1?label=&message=Docker%20Profile&color=2496ED&logo=Docker&labelColor=2F333A)](https://hub.docker.com/u/ralexrivero)
