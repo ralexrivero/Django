@@ -25,6 +25,10 @@ Django is a MTV Model Template View derived from MVC - Model View Controller.
 - Model: It is the part of the application that deals with the data. It is responsible for the data management and the data storage. It is the part of the application that interacts with the database. It is the part of the application that is responsible for the data management and the data storage. It is the part of the application that interacts with the database. Its conected to the database through the ORM
 - View: It is the part of the application that deals with the user interface. It is responsible for the presentation of the data. It is the part of the application that interacts with the user. It is the part of the application that deals with the user interface. It is responsible for the presentation of the data. It is the part of the application that interacts with the user. The view makes the front end of the application.
 
+- view: logic
+- template: visual
+- model: data
+
 ### MTV
 
 In this model controller are called views and views are called templates.
@@ -43,7 +47,13 @@ Its a naming convention.
 
 - `python manage.py migrate` generates the database
 - `python manage.py runserver` run development server
+- `sudo chown -R ralex:ralex *` change owner of the project created with root privileges in docker container
 
+## templates
+
+- add `templates` folder in the project folder
+- add 'DIRS': ['templates'], to the TEMPLATES section in settings.py
+- create html file in the `templates` folder
 
 ## Author
 <!-- twitter -->
