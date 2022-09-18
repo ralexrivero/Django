@@ -70,10 +70,6 @@ Its a naming convention.
 
 - `{{ variable | filter }}`
 - `{{ variable | filter:argument }}`
-- `{{ variable | filter:"argument" }}`
-- `{{ variable | filter:"argument1":"argument2" }}`
-- `{{ variable | filter:"argument1" argument2 }}`
-- `{{ variable | filter:"argument1" argument2:"argument3" }}`
 
 - `length` returns the length of the list
 - `lower` converts the string to lowercase
@@ -86,23 +82,21 @@ Its a naming convention.
 - `first` returns the first item of a list
 - `last` returns the last item of a list
 - `join` joins the list with the given string
-- `safe` marks the value as safe which means that django will not escape the string
-- `truncatechars` truncates a string after a given number of chars
-- `truncatewords` truncates a string after a given number of words
-- `slugify` converts a string into a slug
-- `add` adds the arg to the value
-- `get_digit` returns the digit of the number in the given position
-- `random` returns a random item from a list
-- `filesizeformat` formats the value like a human-readable file size (i.e. 13 KB, 4.1 MB, 102 bytes, etc.)
-- `pluralize` adds an s to a word if the value is not 1
-- `yesno` converts boolean values to ‘yes’ or ‘no’
-- `linebreaks` converts all newlines in a piece of plain text to HTML line breaks
-- `linebreaksbr` converts all newlines in a piece of plain text to HTML line breaks (only when followed by a ‘\n’)
-- `removetags` removes all given HTML tags from the value
-- `striptags` removes all HTML tags from the value
-- `urlize` converts URLs in plain text into clickable links
-- `urlizetrunc` converts URLs in plain text into clickable links, truncating longer URLs
-- `wordcount` returns the number of words in the value
+
+## Static files
+
+- add `static` folder in the project folder
+- add environment variable
+
+```python
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+    '/var/www/static'
+]
+```
+
+- {% load static %} in the template
+- {% static 'path/to/file' %} in the template
 
 ## Author
 <!-- twitter -->
