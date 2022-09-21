@@ -85,8 +85,10 @@ Its a naming convention.
 
 ## Static files
 
+- `STATIC_URL = '/static/'`
+- `INSTALLED_APPS = [ 'django.contrib.staticfiles', ]`
 - add `static` folder in the project folder
-- add environment variable
+- add environment variable:
 
 ```python
 STATICFILES_DIRS = [
