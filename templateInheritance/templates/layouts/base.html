@@ -14,20 +14,12 @@
     <link rel="stylesheet" href="{% static 'css/main.css' %}">
 </head>
 <body>
-    <nav>
-        <ul>
-            <li><a href="{% url 'inheritance' %}">Inheritance</a></li>
-            <li><a href="{% url 'other' %}">Other</a></li>
-            <li><a href="{% url 'example' %}">Example</a></li>
-        </ul>
-    </nav>
+    {% include './partials/menu.html' %}
     <main>
         {% block content %}
         {% endblock %}
     </main>
-    <footer>
-        <small>&copy; ralex: all rights reserved</small>
-    </footer>
+    {% include './partials/footer.html' %}
     {% block scripts %}
     {% endblock %}
 </body>
