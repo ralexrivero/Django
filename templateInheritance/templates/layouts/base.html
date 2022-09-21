@@ -1,0 +1,34 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block styles %}
+        {% endblock %}
+    <title>
+        {% block title %}
+        {% endblock %}
+    </title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Other</a></li>
+            <li><a href="#">Inheritance</a></li>
+            <li><a href="#">Example</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <small>&Copy; ralex: all rights reserved</small>
+    </footer>
+    {% block scripts %}
+    {% endblock %}
+</body>
+</html>

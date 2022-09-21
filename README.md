@@ -85,7 +85,7 @@ Its a naming convention.
 
 ## Static files
 
-- `STATIC_URL = '/static/'`
+- `STATIC_URL = 'static/'`
 - `INSTALLED_APPS = [ 'django.contrib.staticfiles', ]`
 - add `static` folder in the project folder
 - add environment variable:
@@ -104,7 +104,6 @@ STATICFILES_DIRS = [
 
 - {% block content %} {% endblock %} in the template
 - {% extends 'base.html' %} in the template
-
 
 ## Author
 <!-- twitter -->
