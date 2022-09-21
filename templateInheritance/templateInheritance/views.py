@@ -9,3 +9,5 @@ def example(request):
 def other(request):
     return render(request, 'other.html', {})
 
+def index(request):
+    return render(request, 'index.html', {})
