@@ -121,7 +121,17 @@ STATICFILES_DIRS = [
 
 - `from django.db import models` in models.py in the app folder
 
-each model is a class
+- each model is a class
+- add the model in `models.py`
+
+```python
+class Person(models.Model):
+    name = models.CharField(max_length=200)
+    age = models.IntegerField()
+```
+
+- `python manage.py makemigrations` to create migrations
+- `python manage.py migrate` to apply migrations
 
 ## Author
 <!-- twitter -->
