@@ -13,7 +13,13 @@
 [![Django](https://img.shields.io/static/v1?label=&message=Django&color=092E20&logo=Django&logoColor=092E20&labelColor=F5F5F5)](https://www.djangoproject.com/)<!-- Django -->
 
 - `pip`
+- `venv`
 - `pycodestyle`
+
+## Virtual environment
+
+- `python3 -m venv .venv`
+- `source .venv/bin/activate`
 
 ## Introduction
 
@@ -132,6 +138,12 @@ class Person(models.Model):
 
 - `python manage.py makemigrations` to create migrations
 - `python manage.py migrate` to apply migrations
+
+## populate with dummy data
+
+- `pip install django-seed`
+- add `django_seed` to the `INSTALLED_APPS` in settings.py
+- `python manage.py seed api --number=15` to populate with 15 dummy data
 
 ## Author
 <!-- twitter -->
