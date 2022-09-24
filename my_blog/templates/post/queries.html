@@ -26,7 +26,13 @@
     <h2>First 10 records</h2>
     <ul>
         {% for li in limits %}
-            <li>{{ li.name }}::: {{ li.email }}</li>
+            <li>::: {{ li.email }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Offsets</h2>
+    <ul>
+        {% for off in offsets %}
+        <li>==> {{ off.email }} <==</li>
         {% endfor %}
     </ul>
 </body>

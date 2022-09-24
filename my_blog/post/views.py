@@ -14,4 +14,7 @@ def queries(request):
     # limited query, first 10 records
     limits = Author.objects.all()[:10]
 
-    return render(request, 'post/queries.html', {'authors': authors, 'filtered': filtered, 'author': author, 'limits': limits})
+    # offset, get 5 records avoiding first 5 records
+    offsets = Author.objects.all()[5:10]
+
+    return render(request, 'post/queries.html', {'authors': authors, 'filtered': filtered, 'author': author, 'limits': limits, 'offsets': offsets})
