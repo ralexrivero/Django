@@ -75,7 +75,7 @@ Its a naming convention.
 
 - `{# #}` one line, not rendered in the html
 - `{% comment %} {% endcomment %}` multi line, not renered in the html
-- <!-- comment --> html comment, rendered in the html
+- `<!-- comment -->` html comment, rendered in the html
 
 ### filters
 
