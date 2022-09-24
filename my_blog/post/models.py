@@ -6,7 +6,7 @@ class Author(models.Model):
     email = models.EmailField()
 
     def __str__(self):
-        return 'Name: {}\nemail: {}'.format(self.name, self.email)
+        return 'Name ==> {}\nemail==> {}'.format(self.name, self.email)
 
 class Entry(models.Model):
     author = models.ForeignKey(Author, on_delete=models.CASCADE)
