@@ -21,6 +21,11 @@
 - `python3 -m venv .venv`
 - `source .venv/bin/activate`
 
+### requirements
+
+- `pip freeze > requirements.txt` generates `requirements.txt`
+- `pip install -r requirements.txt` installs packages from `requirements.txt`
+
 ## Introduction
 
 Django is a MTV Model Template View derived from MVC - Model View Controller.
