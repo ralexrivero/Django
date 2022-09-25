@@ -152,7 +152,17 @@ class Person(models.Model):
 
 ## queries
 
-
+- add to the field `__` and the query
+- `__lte` less than or equal to
+- `__gte` greater than or equal to
+- `__lt` less than
+- `__gt` greater than
+- `__contains` contains
+- `__exact` exact match
+- `__startswith` starts with
+- `__endswith` ends with
+- `__in` in a list
+- `__range` in a range
 
 ## Author
 <!-- twitter -->

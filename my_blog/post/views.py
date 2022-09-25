@@ -20,4 +20,7 @@ def queries(request):
     # order
     orders = Author.objects.all().order_by('email')
 
-    return render(request, 'post/queries.html', {'authors': authors, 'filtered': filtered, 'author': author, 'limits': limits, 'offsets': offsets, 'orders': orders})
+    # get records where ide is less or equal than 15
+    filtered2 = Author.objects.filter(id__lte=15).order_by('email').filter(email__contains='rg').filter(email__startswith='a')
+
+    return render(request, 'post/queries.html', {'authors': authors, 'filtered': filtered, 'author': author, 'limits': limits, 'offsets': offsets, 'orders': orders, 'filtered2': filtered2})

@@ -41,5 +41,11 @@
         <li>{{ elem.email }}</li>
         {% endfor %}
     </ul>
+    <h2>Filtered</h2>
+    <ul>
+        {% for elem in filtered2 %}
+            <li>{{ elem.email }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
