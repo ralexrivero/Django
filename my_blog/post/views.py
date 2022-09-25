@@ -17,4 +17,7 @@ def queries(request):
     # offset, get 5 records avoiding first 5 records
     offsets = Author.objects.all()[5:10]
 
-    return render(request, 'post/queries.html', {'authors': authors, 'filtered': filtered, 'author': author, 'limits': limits, 'offsets': offsets})
+    # order
+    orders = Author.objects.all().order_by('email')
+
+    return render(request, 'post/queries.html', {'authors': authors, 'filtered': filtered, 'author': author, 'limits': limits, 'offsets': offsets, 'orders': orders})

@@ -35,5 +35,11 @@
         <li>==> {{ off.email }} <==</li>
         {% endfor %}
     </ul>
+    <h2>Ordered element by email</h2>
+    <ul>
+        {% for elem in orders %}
+        <li>{{ elem.email }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
