@@ -167,6 +167,18 @@ class Person(models.Model):
 ### update
 
 - recover, update and save
+- `person = Person.objects.get(id=1)`
+- `person.name = 'new name'`
+- `person.save()`
+
+### delete
+
+- `person.delete()`
+
+## one to one
+
+A one to one relationship is a relationship between two tables where each row in one table is related to only one row in another table.
+
 
 
 ## Author
