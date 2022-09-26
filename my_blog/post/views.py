@@ -24,3 +24,12 @@ def queries(request):
     filtered2 = Author.objects.filter(id__lte=15).order_by('email').filter(email__contains='rg').filter(email__startswith='a')
 
     return render(request, 'post/queries.html', {'authors': authors, 'filtered': filtered, 'author': author, 'limits': limits, 'offsets': offsets, 'orders': orders, 'filtered2': filtered2})
+
+
+def update(request):
+    qu1 = Author.objects.get(id=1)
+    qu1.name = 'Ronald'
+    qu1.email = 'ralexrivero@gmail.com'
+    qu1.save()
+
+    return render(request, 'post/update.html', {'qu1': qu1})
