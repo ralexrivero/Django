@@ -45,4 +45,8 @@ def create(request):
     pub1 = Publication.objects.get(id=1)
     q3 = pub1.article_set.all()
 
+    art2 = Article.objects.get(id=2)
+    pub4 = Publication.objects.get(id=4)
+    art2.publications.remove(pub4)
+
     return render (request, 'manytomany/create.html', {'q1':q1, 'q2':q2, 'q3':q3})
