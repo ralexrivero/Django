@@ -11,4 +11,4 @@ class Article(models.Model):
     publications = models.ManyToManyField(Publication)
 
     def __str__(self):
-        return 'Headline: {}'.format(self.headline)
+        return 'Article headline: {}'.format(self.headline)

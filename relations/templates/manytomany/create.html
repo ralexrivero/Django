@@ -8,6 +8,18 @@
 </head>
 <body>
     <h1>Many to many</h1>
-    <h2>header 2</h>
+    <h2>Article 1</h2>
+    <ul>
+        {% for pub in q1 %}
+        <li>{{ pub }}</li>
+        {% endfor%}
+    </ul>
+    <small>article 1 is in {{ q2 }} publications</small>
+    <h2>Articles in Publication 1</h2>
+    <ul>
+        {% for pub in q3 %}
+        <li>{{ pub }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>

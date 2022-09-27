@@ -194,6 +194,7 @@ The field with the relation to one receives the foreign key. The field with the 
 
 - use `ManyToManyField` in the model
 - dont define `on_delete` in the model
+- first create both elements and save them, then add the relation
 
 ## Author
 <!-- twitter -->
