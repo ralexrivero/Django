@@ -1,4 +1,9 @@
+from datetime import date
 from django.shortcuts import render
+from .models import Reporter, Article
 
 def create(request):
-    return render(request, 'manytoone/create.html', {})
+    r1 = Reporter(first_name='Ronald', last_name='Rivero', email='ralexrivero@gmail.com')
+    a1 = Article(headline='Been a Full Stack Developer', pub_date=date.today(), reporter=r1)
+
+    return render(request, 'manytoone/create.html', {'a1':a1})

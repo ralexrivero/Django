@@ -179,9 +179,16 @@ class Person(models.Model):
 
 A one to one relationship is a relationship between two tables where each row in one table is related to only one row in another table.
 
+use `OneToOneField` in the model
+
 ## one to many
 
 A one to many relationship is a relationship between two tables where each row in one table is related to many rows in another table.
+
+Create the relation using the foreign key in the model.
+The field with the relation to one receives the foreign key. The field with the relation to many receives the related name.
+
+- use `ForeignKey` in the model
 
 ## Author
 <!-- twitter -->
