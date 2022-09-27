@@ -12,5 +12,12 @@
     <p>{{ a1 }}</p>
     <h2>Queries</h3>
     <p>{{ q1 }}</p>
+    <h3>Query all articles from a reporter</h3>
+    <ul>
+        {% for art in q2 %}
+        <li>{{ art }}</li>
+        {% endfor %}
+    </ul>
+    <p>Total of articles: {{ q3 }}</p>
 </body>
 </html>

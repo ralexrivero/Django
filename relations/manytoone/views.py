@@ -14,5 +14,7 @@ def create(request):
 
     # queries
     q1 = a1.reporter.first_name
+    q2 = r1.article_set.all()
+    q3 = r1.article_set.count()
 
-    return render(request, 'manytoone/create.html', {'a1':a1, 'q1':q1})
+    return render(request, 'manytoone/create.html', {'a1':a1, 'q1':q1, 'q2': q2, 'q3': q3})
