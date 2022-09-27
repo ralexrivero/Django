@@ -9,4 +9,4 @@ def create(request):
     restaurant1 = Restaurant(place=place1, number_of_employees=8)
     restaurant1.save()
 
-    return render(request, 'migrations/create.html', {'r1':restaurant1})
+    return render(request, 'onetoone/create.html', {'r1':restaurant1})
