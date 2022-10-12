@@ -8,6 +8,9 @@ services:
       - "8000:8000"
     depends_on:
       - pg-db
+    command: python manage.py runserver 0.0.0.0:8000
+    volumes:
+      - .:/code
   pg-db:
     container_name: pg-db
     image: postgres
@@ -16,8 +19,5 @@ services:
       - "5432"
     env_file:
       - ./database/env_vars
-#     volumes:
-#       - ./database/data:docker-entrypoint-initdb.d:ro
-#       - pg_project:/var/lib/postgresql/data
-# volumes:
-#   pg_project:
+    volumes:
+      - ./database/data:/var/lib/postgresql/data
