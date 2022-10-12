@@ -9,7 +9,7 @@ def createServer():
     try:
         serversocket.bind(('localhost', 80))
         serversocket.listen(5)
-        while(True):
+        while True:
             (clientsocket, address) = serversocket.accept()
 
             rd = clientsocket.recv(5000).decode()

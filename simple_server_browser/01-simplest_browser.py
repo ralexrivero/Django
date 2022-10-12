@@ -4,8 +4,8 @@
 import socket
 
 mySock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-mySock.connect(('data.pr4e.org', 80))
-cmd = 'GET http://data.pr4e.org/page1.htm HTTP/1.0\r\n\r\n'.encode()
+mySock.connect(('127.0.0.1', 80))
+cmd = 'GET http://127.0.0.1 HTTP/1.0\r\n\r\n'.encode()
 mySock.send(cmd)
 
 while True:
