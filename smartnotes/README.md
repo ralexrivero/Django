@@ -36,6 +36,10 @@ INSTALLED_APPS = [
 ]
 ```
 
+## django admin
+
+- `python manage.py createsuperuser`, create super user like admin with email and password
+
 ### Deploy to DigitalOcean
 
 - `ssh-keygen -t rsa -b 4096`
