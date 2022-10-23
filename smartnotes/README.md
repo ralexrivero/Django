@@ -39,6 +39,12 @@ INSTALLED_APPS = [
 ## django admin
 
 - `python manage.py createsuperuser`, create super user like admin with email and password
+- visit the admin page `localhost:8000/admin`
+
+## models
+
+- `python manage.py makemigrations` after created models, to create the instructions
+- `python manage.py migrate` to apply migrations
 
 ### Deploy to DigitalOcean
 
