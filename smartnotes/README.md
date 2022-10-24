@@ -46,6 +46,16 @@ INSTALLED_APPS = [
 - `python manage.py makemigrations` after created models, to create the instructions
 - `python manage.py migrate` to apply migrations
 
+## static files
+
+- add to `settings.py`
+
+```python
+STATICFILES_DIRS = [
+    BASE_DIR / 'static',
+]
+```
+
 ### Deploy to DigitalOcean
 
 - `ssh-keygen -t rsa -b 4096`
