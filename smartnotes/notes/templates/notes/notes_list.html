@@ -1,24 +1,18 @@
-{% load static %}
+{% extends "base.html" %}
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
-    <title>Notes</title>
-</head>
-<body>
-    <h1>Notes</h1>
-    <ul>
+{% block content %}
+    <h1 class="my-5">Notes</h1>
+    <div class="row row-cols3 g-2">
         {% for note in notes %}
-            <li class="note-li">
-                <h2>{{ note.title }}</h2>
-                <p>{{ note.text }}</p>
-                <small>{{ note.created }}</small>
-            </li>
+            <div class="col">
+                <div class="p-3 border">
+                    <a class="text-dark text-decoration-none" href="{% url 'notes.detail' pk=note.id %}">
+                        <h3>{{ note.title }}</h3>
+                        <p>{{ note.text | truncatechars:24}}</p>
+                        <small>created: {{ note.created }}</small>
+                    </a>
+                </div>
+            </div>
         {% endfor %}
-    </ul>
-</body>
-</html>
+    </div>
+{% endblock %}

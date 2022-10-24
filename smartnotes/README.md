@@ -56,6 +56,17 @@ STATICFILES_DIRS = [
 ]
 ```
 
+## extends base html
+
+= add to `settings.py`
+
+```python
+TEMPLATES = [
+    {
+        'DIRS': [
+            BASE_DIR / 'static/templates'
+```
+
 ### Deploy to DigitalOcean
 
 - `ssh-keygen -t rsa -b 4096`
