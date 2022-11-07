@@ -15,8 +15,8 @@ class NotesForm(forms.ModelForm):
             'text': forms.Textarea(attrs={'class': 'form-control my-5'})
         }
 
-    def clean_title(self):
+"""     def clean_title(self):
         title = self.cleaned_data['title']
         if 'Django' not in title:
             raise ValidationError('We only accept notes about Django')
-        return title
+        return title """

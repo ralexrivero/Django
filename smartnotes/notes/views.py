@@ -21,7 +21,7 @@ class NotesCreateView(CreateView):
     form_class = NotesForm
 
 
-class NoteUpdateView(UpdateView):
+class NotesUpdateView(UpdateView):
     model = Notes
-    context_object_name = "note"
-    template_name = "notes/single_note.html"
+    success_url = '/smart/notes'
+    form_class = NotesForm
