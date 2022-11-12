@@ -6,7 +6,6 @@ from .models import Notes
 from .forms import NotesForm
 
 
-
 class NotesListView(LoginRequiredMixin, ListView):
     model = Notes
     context_object_name = "notes"
@@ -23,10 +22,11 @@ class NotesDitailView(DetailView):
     template_name = "notes/single_note.html"
 
 
-class NotesCreateView(CreateView):
+class NotesCreateView(LoginRequiredMixin, CreateView):
     model = Notes
     success_url = '/smart/notes'
     form_class = NotesForm
+    login_url = '/admin'
 
     def form_valid(self, form):
         self.object = form.save(commit=False)
