@@ -1,12 +1,13 @@
-from logging import logMultiprocessing
-from pipes import Template
-from django.shortcuts import render
-from django.http import HttpResponse
 from datetime import datetime
-# from django.contrib.auth.decorators import login_required
 from django.views.generic import TemplateView
-from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.edit import CreateView
 from django.contrib.auth.views import LoginView, LogoutView
+from django.contrib.auth.forms import UserCreationForm
+
+class SignupView(CreateView):
+    form_class = UserCreationForm
+    template_name = 'home/register.html'
+    success_url = '/smart/notes'
 
 
 class LogoutInterfaceView(LogoutView):
@@ -20,4 +21,3 @@ class LoginInterfaceView(LoginView):
 class HomeView(TemplateView):
     template_name = 'home/welcome.html'
     extra_context = {'today': datetime.today()}
-
