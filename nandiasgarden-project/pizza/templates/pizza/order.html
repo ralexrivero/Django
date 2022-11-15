@@ -2,7 +2,10 @@
 
 {% block content %}
 <h1>Order a pizza!</h1>
-
+<h2>{{ note }}</h2>
+{% if created_pizza_pk %}
+    <a href="{% url 'edit_order' created_pizza_pk %}">Edit your order</a>
+{% endif %}
 <form action="{% url 'order' %}" method='POST'>{% csrf_token %}
 {{ pizzaform }}
 <input type="submit" value="Order Pizza">
