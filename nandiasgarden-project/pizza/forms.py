@@ -4,7 +4,7 @@ from .models import Pizza, Size
 
 class PizzaForm(forms.ModelForm):
 
-    size = forms.ModelChoiceField(queryset=Size.objects, empty_label=None, widget=forms.RadioSelect)
+    size = forms.ModelChoiceField(queryset=Size.objects, empty_label=None, widget=forms.ChoiceField.widget(attrs={'class': 'form-control'}))
 
     class Meta:
         model = Pizza
